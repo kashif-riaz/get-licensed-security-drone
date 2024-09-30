@@ -1,0 +1,1214 @@
+@import "./variable";
+@import "./mixin";
+
+html {
+  font-size: 62.5%;
+}
+
+// Go to Section On Header Start
+
+.header-collapse-parent {
+  background-color: $white-color;
+  border-bottom: 0.5px solid #e4e4e4;
+  font-family: "Roboto", sans-serif;
+  a {
+    text-decoration: none;
+  }
+}
+.show {
+  display: block !important;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+  animation: bottomtop 0.5s ease-in;
+}
+
+@keyframes bottomtop {
+  0%{
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+    top: 13%;
+    left: 50%;
+  }
+  
+}
+
+.bg-card-parent {
+  a {
+    text-decoration: none;
+  }
+  .bg-card {
+    border-radius: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    background-color: #242429;
+    height: 105px;
+    padding: 1.6rem 0rem 0rem 0.8rem;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: #25d366;
+      transition: all 0.2s ease-in;
+      &:hover .bg-card-img {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        bottom: 0%;
+        right: 0%;
+      }
+    }
+  }
+  h4 {
+    font-size: $fs-16;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+  .bg-card-img {
+    max-width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.quick-links {
+  background-color: #f8f8f8;
+  .we-are-quick-heading {
+    margin-top: 6.3rem;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: $fs-28;
+    line-height: 3.4rem;
+    font-weight: 700;
+    color: $black-color;
+  }
+  .social-icon {
+    gap: 2rem;
+    .fa-brands {
+      font-size: 3rem;
+      &:hover {
+        color: #1877f2 !important;
+      }
+    }
+  }
+}
+
+.quick-links-list-parent {
+  gap: 1rem;
+  &:hover .quick-link-circle {
+    background-color: #419533;
+  }
+  &:hover .quick-link-text .quick-text-hover {
+    color: #419533;
+  }
+  .quick-link-circle {
+    background-color: #50b37f;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
+  .quick-link-text {
+    .quick-text-hover {
+      font-size: $fs-16;
+      color: #454545;
+    }
+  }
+}
+
+.hiring-traning {
+  background-color: #ffe500;
+  padding: 4.8rem !important;
+  h4 {
+    font-family: "Oswald", sans-serif;
+    color: #101010;
+    font-size: $fs-16;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    color: #101010;
+    font-size: $fs-40;
+    line-height: 4.8rem;
+    font-weight: 700;
+  }
+  p {
+    color: #101010;
+    font-size: $fs-16;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+  .learn-more {
+    margin-top: 8.3rem;
+    font-size: $fs-16;
+    font-weight: 400;
+    line-height: 2.4rem;
+    transition: all 0.5s ease-in-out;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    &:hover {
+      color: #419533;
+    }
+  }
+}
+
+// Header Section Start
+
+.top-header-toggle-btn{
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(0deg);
+  &:focus{
+    transform: rotate(180deg);
+  }
+}
+
+.header-parent {
+  background-color: #242429;
+  font-family: "Roboto", sans-serif;
+}
+
+.company-logo {
+  width: 60%;
+}
+
+.down-arrow-header {
+  margin-left: 0.8rem;
+}
+
+.navbar {
+  padding-block: 2rem;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-expand-lg .navbar-nav {
+  gap: 2rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: $fs-16;
+  padding-block: 2rem 1.6rem;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: $green-color;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: #929294;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:focus {
+    color: #929294;
+  }
+}
+
+.nav-link-img {
+  &:hover .img-hover {
+    opacity: 0.6;
+  }
+  span {
+    font-size: $fs-13 !important;
+  }
+}
+
+.nav-link-center {
+  color: white;
+  font-size: $fs-16;
+  text-decoration: none;
+  &:hover {
+    color: #929294;
+  }
+}
+
+.nav-bar-last {
+  gap: 2rem;
+}
+
+// Hero section Start
+
+.row > * {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-parent {
+  background: url(../images/hero-bg.png) no-repeat;
+  background-size: contain;
+  background-position: right;
+  z-index: -1;
+  background-color: #242429;
+  padding-block: 5.6rem;
+  .hero-section-content {
+    font-family: "Roboto", sans-serif;
+    color: White;
+    h1 {
+      text-transform: uppercase;
+      font-family: "Oswald", sans-serif;
+      font-size: $fs-65;
+      line-height: 6.9rem;
+      font-weight: 700;
+      span {
+        color: #ffe500;
+      }
+    }
+    p {
+      padding-block: 2.4rem;
+      font-size: $fs-24;
+      line-height: 3rem;
+      font-weight: 700;
+    }
+    button {
+      border: none;
+      background-color: #ffe500;
+      font-size: $fs-16;
+      color: #242429;
+      font-weight: 700;
+      padding: 1.4rem 4.8rem;
+      border-radius: 0.4rem;
+      transition: all 0.5s ease-in-out;
+      .fa-solid {
+        margin-left: 1rem;
+      }
+      &:hover {
+        background-color: #14130d;
+        color: white;
+      }
+    }
+  }
+  .hero-section-vedio {
+    border: 1rem solid #f0f0f0;
+    border-radius: 8rem;
+    overflow: hidden;
+    margin-inline: 6.5rem 1.2rem;
+  }
+}
+
+// What you’ll learn Start
+
+.learn {
+  font-family: "Roboto", sans-serif;
+  h2 {
+    font-size: $fs-28;
+    font-weight: 700;
+    color: #242429;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .learn-btn {
+    p {
+      font-size: $fs-16;
+      line-height: 2.4rem;
+      font-style: italic;
+    }
+    button {
+      border: none;
+      background-color: #ffe500;
+      font-size: $fs-16;
+      color: #242429;
+      font-weight: 700;
+      padding: 1.4rem 4.8rem;
+      border-radius: 0.4rem;
+      transition: all 0.5s ease-in-out;
+      .fa-solid {
+        margin-left: 1rem;
+      }
+      &:hover {
+        background-color: #14130d;
+        color: white;
+      }
+    }
+  }
+}
+
+.learn-gap {
+  row-gap: 3.6rem;
+}
+
+.icon-wrapper {
+  padding: 1.6rem;
+  background-color: #d9d9d9;
+  border-radius: 1rem;
+  min-width: 100px;
+  min-height: 100px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  img {
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    background-color: #ffe500;
+  }
+  &:hover .learn-img-hover {
+    opacity: 1;
+  }
+}
+
+.learn-heading {
+  font-size: $fs-16;
+  line-height: 2.4rem;
+}
+
+.learn-para {
+  font-size: $fs-16;
+  line-height: 1.6rem;
+}
+
+// Fly High in Your Career Start
+
+.bg-fly-high-section {
+  position: relative;
+
+  background-image: url(../images/drone-man.png),
+    url(../images/bg-yellow-curve.svg);
+  background-position: right 15% bottom, 100% 0%;
+  background-repeat: no-repeat, no-repeat;
+
+  .fly-drone-background {
+    position: relative;
+  }
+  .bg-color {
+    background-color: #242328;
+    position: relative;
+    z-index: -2;
+  }
+}
+
+.drone {
+  max-width: 220px;
+  max-height: 220px;
+  position: absolute;
+  top: 14%;
+  left: 29%;
+  z-index: -1;
+  transition: all 20s ease-in-out;
+  animation: movement-drone 30s ease infinite;
+}
+
+@keyframes movement-drone {
+  10% {
+    top: 16%;
+    left: 65%;
+  }
+  20% {
+    top: 14%;
+    left: 28%;
+  }
+
+  30% {
+    top: 65%;
+    left: 28%;
+  }
+  40% {
+    top: 10%;
+    left: 38%;
+  }
+  50% {
+    top: 16%;
+    left: 65%;
+  }
+  60% {
+    top: 70%;
+    left: 29%;
+  }
+  70% {
+    top: 58%;
+    left: 48%;
+  }
+  80% {
+    top: 73%;
+    left: 21%;
+  }
+  90% {
+    top: 16%;
+    left: 65%;
+  }
+  100% {
+    top: 14%;
+    left: 27%;
+  }
+}
+
+.fly-high-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: $fs-75;
+  strong {
+    color: #ffe500;
+  }
+}
+
+.fly-high-para {
+  font-family: "Roboto", sans-serif;
+  font-size: $fs-24;
+}
+
+// Stand out from the rest Start
+
+.text-18 {
+  font-size: $fs-18;
+}
+
+.stand-div-img {
+  background-color: #929294;
+  padding: 2.4rem;
+  border-radius: 50%;
+  width: fit-content;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  .stand-img {
+    width: 80px;
+    height: 70px;
+    opacity: 0.6;
+  }
+  &:hover {
+    background-color: #ffe500;
+    cursor: pointer;
+  }
+  &:hover .stand-img {
+    opacity: 1;
+  }
+}
+
+// Are you ready to start your course now Start
+
+.bg-start-course {
+  background-color: #393b3b;
+  font-family: "Roboto", sans-serif;
+  padding-block: 4.8rem;
+}
+
+.fs-28 {
+  font-size: $fs-28;
+  line-height: 4.2rem;
+}
+
+.get-start-btn {
+  border: none;
+  background-color: #ffe500;
+  font-size: $fs-16;
+  color: #242429;
+  font-weight: 700;
+  padding: 1.4rem 4.8rem;
+  border-radius: 0.4rem;
+  transition: all 0.5s ease-in-out;
+  .fa-solid {
+    margin-left: 1rem;
+  }
+  &:hover {
+    background-color: #14130d;
+    color: white;
+  }
+}
+
+// People Reviews Start
+
+.pad-blk-people-saying {
+  font-family: "Roboto", sans-serif;
+  padding-block: 4rem 4.8rem;
+}
+
+.people-heading {
+  font-size: $fs-40;
+  line-height: 4.8rem;
+}
+
+.green-on-hover {
+  text-align: center;
+  p {
+    color: $black-color;
+    font-size: $fs-16;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+}
+
+.border-top {
+  border-top: 1px solid $black-color !important;
+}
+
+.swiper-wrapper {
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.6rem;
+  background-color: transparent;
+  border: 2px solid #14130d;
+  border-radius: 19px;
+}
+
+.swiper-card-second-p {
+  font-weight: 700;
+}
+
+// Swiper By defualt
+
+.swiper-parent {
+  position: relative;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: #ffe500 !important;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #fff !important;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: #ffe500 !important;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: #fff !important;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: #ffe500 !important;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: #fff !important;
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: #ffe500 !important;
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: #fff !important;
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: #ffe500 !important;
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: #fff !important;
+}
+
+// GET THE GUARDPASS APP Start
+
+.get-guard-pass-parent-grey {
+  background-color: #f8f8f8;
+  padding-top: 5rem;
+  position: relative;
+  .get-guard-pass-parent-yellow {
+    padding-block: 4.8rem;
+    background-color: #f9e42c;
+    .get-guard-pass-mobile-img {
+      position: absolute;
+
+      bottom: 0;
+      right: 10%;
+      max-width: 500px;
+      max-height: 550px;
+    }
+    .bg-yellow-circle {
+      position: absolute;
+      bottom: 0;
+      right: 8%;
+      width: 600px;
+      height: 500px;
+    }
+  }
+}
+
+.get-guradpass-content {
+  font-family: "Roboto", sans-serif;
+  img {
+    margin-right: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: $fs-60;
+    font-weight: 800;
+    color: $black-color;
+  }
+  p {
+    font-size: $fs-22;
+    line-height: 2.6rem;
+    font-weight: 800;
+    color: $black-color;
+    margin-bottom: 4rem;
+  }
+}
+
+// Here to help Start
+
+.help-section {
+  font-family: "Roboto", sans-serif;
+  padding-block: 6rem;
+  background-color: #f8f8f8;
+}
+
+.here-help-content {
+  padding-right: 1.2rem;
+  h3 {
+    font-size: $fs-34;
+    line-height: 4.1rem;
+    margin-bottom: 2.4rem;
+  }
+  p {
+    font-size: $fs-16;
+    line-height: 2.4rem;
+  }
+}
+
+.help-contact {
+  .label-icon {
+    font-size: $fs-16;
+    font-weight: 700;
+    color: $black-color;
+  }
+}
+
+// FOMO Alert Start
+
+.fomo-alert-section {
+  font-family: "Roboto", sans-serif;
+  padding-block: 6rem;
+  background-color: $white-color;
+}
+
+.fomo-alert-right {
+  h2 {
+    font-size: $fs-28;
+    line-height: 3.4rem;
+    font-weight: 700;
+    margin-bottom: 5.6rem;
+  }
+  .dont-get {
+    font-size: $fs-20;
+    line-height: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: rgb(36, 36, 41);
+  }
+  .social-icon {
+    gap: 1.6rem;
+    margin-bottom: 5.6rem;
+    .fa-brands {
+      font-size: 2.4rem;
+      cursor: pointer;
+      &:hover {
+        color: #1877f2 !important;
+      }
+    }
+    .fa-youtube {
+      &:hover {
+        color: red !important;
+      }
+    }
+    .fa-instagram {
+      &:hover {
+        color: #f56040 !important;
+      }
+    }
+  }
+  .get-news {
+    font-size: $fs-16;
+    line-height: 2.4rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  .foam {
+    border-radius: 0.25rem;
+    border: 1px solid #c7c7c7;
+    width: 70%;
+
+    input[type="text"] {
+      border: none;
+      font-size: $fs-16;
+      padding-inline: 4.2rem 1.2rem;
+      background: url(../images/paper-plan.svg) no-repeat;
+      background-size: contain;
+      background-position-x: 2%;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      border: none;
+      font-size: $fs-16;
+      background-color: $black-color;
+      color: white;
+
+      padding: 1.6rem;
+    }
+  }
+}
+
+.fomo-alert-left {
+  h3 {
+    font-size: $fs-28;
+    line-height: 3.4rem;
+    margin-bottom: 5.6rem;
+    font-weight: 700;
+  }
+  .fomo-certificate {
+    img {
+      height: 100px;
+    }
+  }
+}
+
+// Payment Options Start
+
+.payment-setion {
+  background-color: #f8f8f8;
+  padding-block: 6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.payment-heading {
+  font-size: $fs-28;
+  line-height: 3.4rem;
+  font-weight: 700;
+  color: #242429;
+}
+
+.payment-parent {
+  gap: 20rem;
+  .payment-option {
+    h5 {
+      font-size: $fs-16;
+      line-height: 2.4rem;
+      color: #515155;
+    }
+  }
+
+  .atm-img {
+    gap: 0.8rem;
+    img {
+      width: 100%;
+      height: 32px;
+    }
+  }
+  .payment-interest {
+    h3 {
+      font-size: $fs-16;
+      line-height: 2.4rem;
+      color: #515155;
+    }
+  }
+}
+
+.get-licensed-logo {
+  padding-block: 1.6rem;
+  background-color: #1e1e1e;
+  font-family: "Roboto", sans-serif;
+}
+
+// Footer
+
+.logo-para {
+  img {
+    width: 150px;
+    height: 40px;
+    margin-right: 2.4rem;
+  }
+  p {
+    font-size: $fs-16;
+    line-height: 2.4rem;
+    color: $white-color;
+  }
+}
+
+.social {
+  font-size: $fs-16;
+  font-family: "Roboto", sans-serif;
+  padding: 1.6rem;
+  background-color: #000000;
+  .div {
+    text-decoration: underline;
+    a {
+      color: white;
+      span {
+        padding-right: 0.6rem;
+        border-right: 1px solid white;
+      }
+    }
+  }
+}
+
+// Fixed Measseage
+
+.fixed-meassage {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  .send-messeage-fix {
+    background-color: #25d366;
+    padding: 1.6rem;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    svg path {
+      fill: rgb(255, 255, 255);
+    }
+  }
+}
+// Media Query
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding-inline: 2rem;
+  }
+
+  //   Header
+
+  .navbar > .container-fluid {
+    flex-wrap: nowrap;
+  }
+
+  //   Hero- Section Start
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .hero-parent {
+    background: none;
+    background-color: #242429;
+    padding-block: 1.6rem;
+    position: relative;
+    .hero-section-content {
+      padding-block: 23.4rem 2.4rem;
+      font-family: "Roboto", sans-serif;
+      color: White;
+      h1 {
+        text-transform: uppercase;
+        font-family: "Oswald", sans-serif;
+        font-size: $fs-42;
+        line-height: 4.6rem;
+        font-weight: 700;
+        span {
+          color: #ffe500;
+        }
+      }
+      p {
+        padding-block: 2.4rem;
+        font-size: $fs-22;
+        line-height: 2.6rem;
+      }
+      button {
+        border: none;
+        background-color: #ffe500;
+        font-size: $fs-16;
+        color: #242429;
+        font-weight: 700;
+        padding: 1.4rem 4.8rem;
+        border-radius: 0.4rem;
+        transition: all 0.5s ease-in-out;
+        .fa-solid {
+          margin-left: 1rem;
+        }
+        &:hover {
+          background-color: #14130d;
+          color: white;
+        }
+      }
+    }
+    .hero-section-vedio {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border: 1rem solid #f0f0f0;
+      border-radius: 4rem;
+      overflow: hidden;
+      margin-inline: 0rem;
+    }
+  }
+
+  // Fly High in Your Career Start
+
+  .bg-fly-high-section {
+    background-image: url(../images/drone-man-mobile.png),
+      url(../images/bg-yellow-mob.svg);
+    background-position: right 15% bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .drone {
+    max-width: 70px !important;
+    max-height: 80px !important;
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    z-index: -1;
+    transition: all 20s ease-in-out;
+    animation: movement-drone 30s ease infinite;
+  }
+
+  @keyframes movement-drone {
+    10% {
+      top: 26%;
+      left: 63%;
+    }
+    20% {
+      top: 8%;
+      left: 35%;
+    }
+
+    30% {
+      top: 63%;
+      left: 26%;
+    }
+    40% {
+      top: 8%;
+      left: 42%;
+    }
+    50% {
+      top: 26%;
+      left: 63%;
+    }
+    60% {
+      top: 63%;
+      left: 26%;
+    }
+    70% {
+      top: 52%;
+      left: 48%;
+    }
+    80% {
+      top: 63%;
+      left: 18%;
+    }
+    90% {
+      top: 26%;
+      left: 63%;
+    }
+    100% {
+      top: 8%;
+      left: 35%;
+    }
+  }
+
+  .fly-high-heading {
+    font-size: $fs-26;
+  }
+
+  // Are you ready to start your course now Start
+
+  .bg-start-course {
+    text-align: center;
+  }
+
+  .fs-28 {
+    font-size: $fs-24;
+    line-height: 3.6rem;
+  }
+
+  // GET THE GUARDPASS APP Start
+
+  .get-guard-pass-parent-grey {
+    background-color: #f8f8f8;
+    padding-top: 5rem;
+    position: relative;
+    .get-guard-pass-parent-yellow {
+      padding-block: 4.8rem 0rem;
+      background-color: #f9e42c;
+      .get-guard-pass-mobile-img {
+        position: relative;
+        bottom: 0;
+        right: 0%;
+        max-width: 380px;
+        max-height: 550px;
+      }
+      .bg-yellow-circle {
+        position: absolute;
+        bottom: 0;
+        right: 0%;
+        width: 600px;
+        height: 500px;
+      }
+    }
+  }
+
+  .get-guradpass-content {
+    font-family: "Roboto", sans-serif;
+
+    img {
+      max-width: 110px;
+      text-align: center;
+      margin-right: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: $fs-32;
+      line-height: 4.8rem;
+    }
+    p {
+      text-align: center;
+      font-size: $fs-22;
+      color: $black-color;
+    }
+    .apps-links {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  // FOMO Alert Start
+
+  .fomo-alert-section {
+    padding-block: 4rem;
+  }
+
+  .fomo-alert-right {
+    h2 {
+      margin-bottom: 2.4rem;
+    }
+    .dont-get {
+      font-size: $fs-18;
+    }
+    .social-icon {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .foam {
+    border-radius: 0.25rem;
+    border: 1px solid #c7c7c7;
+    width: 70%;
+
+    input[type="text"] {
+      border: none;
+      font-size: $fs-16;
+      padding-inline: 4.2rem 1.2rem;
+      background: url(../images/paper-plan.svg) no-repeat;
+      background-size: contain;
+      background-position-x: 2%;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      border: none;
+      font-size: $fs-16;
+      background-color: $black-color;
+      color: white;
+
+      padding: 1.6rem;
+    }
+  }
+
+  .fomo-alert-left {
+    h3 {
+      margin-top: 4rem;
+      font-size: $fs-28;
+      line-height: 3.4rem;
+      margin-bottom: 5.6rem;
+      font-weight: 700;
+    }
+    .fomo-certificate {
+      gap: 2rem;
+    }
+  }
+
+  // Payment Options Start
+
+  .payment-setion {
+    padding-block: 4rem;
+  }
+
+  .payment-parent {
+    gap: 3rem;
+
+    .atm-img {
+      gap: 0.8rem;
+      img {
+        width: 100%;
+        height: 24px;
+      }
+    }
+    .payment-interest {
+      align-self: flex-start !important;
+    }
+  }
+
+  // Footer
+
+  .logo-para {
+    gap: 1rem;
+
+    img {
+      margin-right: 0rem;
+      align-self: self-start;
+    }
+  }
+  .social {
+    padding: 0rem;
+    padding-block: 1.6rem;
+  }
+  .resources {
+    align-items: flex-start !important;
+    gap: 2rem;
+  }
+}
